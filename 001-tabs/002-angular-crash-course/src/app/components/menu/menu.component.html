@@ -1,8 +1,11 @@
 <ul class="list-group">
-    <a routerLink ='/home' class="list-group-item">
-        Home
+    <a [routerLink] ='menu_routes.path'
+     class="list-group-item" 
+    *ngFor="let menu of menu_routes">
+        {{ menu_routes.name}}
     </a>
     
+    <!-- 02 Using ngFor 
     <a routerLink ='/about' class="list-group-item">
         About
     </a>
@@ -10,7 +13,9 @@
     <a routerLink ='/home' class="list-group-item">
         Contact
     </a>
-    <!-- Using Href, insted routerlink
+    -->
+    
+    <!-- 01 Using Href, insted routerlink
     <a href="" class="list-group-item">
     Go to anywhere, from menu.component, using app-menu selector
     </a>
