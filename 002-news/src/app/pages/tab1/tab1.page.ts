@@ -11,6 +11,6 @@ export class Tab1Page implements OnInit{
   constructor(private newsService : NewsService) {}
   ngOnInit(){
     this.newsService.getTopNews().subscribe( articles  => this.articles.push(...articles));
-     };
+     }
   }
 
