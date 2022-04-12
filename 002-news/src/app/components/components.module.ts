@@ -4,11 +4,12 @@ import { IonicModule } from '@ionic/angular';
 import { ArticleComponent } from './article/article.component';
 import { ArticlesComponent } from './articles/articles.component';
 @NgModule({
-  declarations: [],
+  declarations: [
+    ArticleComponent, ArticlesComponent // creados para reutilizar
+  ],
   imports: [
     CommonModule,
     IonicModule, // obligatorio para poder usar ion-component
-    ArticleComponent, ArticlesComponent  // creados para reutilizar
   ],
   exports:[
     ArticlesComponent,
