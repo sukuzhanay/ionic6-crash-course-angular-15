@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  // Creo una nueva propiedad, que sera un arreglo de strings 
+  public categories: string[] =['business','entertainment','general','health','science','sports','technology']
+
   constructor() {}
 
   // Funcion que maneja el cambio de segmentos
-  segmentChanged(){}
+  segmentChanged( category:any){
+    console.log(category)
+  }
 
   
 
