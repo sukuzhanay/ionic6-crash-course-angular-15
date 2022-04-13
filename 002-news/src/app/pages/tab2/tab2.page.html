@@ -24,7 +24,9 @@
       <ion-label class="ion-text-capitalize">{{category}}</ion-label>
     </ion-segment-button>
     
+    <app-articles [articles]="articles" >// Data binding, cuidado no usar espacios en los corchetes
+    </app-articles>
 
-  </ion-segment>
+  </ion-segment> 
 
 </ion-content>
