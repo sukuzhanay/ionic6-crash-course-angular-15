@@ -13,15 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-segment value="pizza" (ionChange)="segmentChanged($event)">
+  <!-- ionChange se diaparara cuando cambie de segmento-->
+  <ion-segment value="bussines" (ionChange)="segmentChanged($event)" mode="md" scrollable="true">
     <ion-segment-button value="pizza">
-      <ion-label>Pizza</ion-label>
+      <ion-label>Bussines</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="pasta">
-      <ion-label>Pasta</ion-label>
+    <ion-segment-button value="sport">
+      <ion-label>Sport</ion-label>
     </ion-segment-button>
   </ion-segment>
 
 </ion-content>
-
-ise

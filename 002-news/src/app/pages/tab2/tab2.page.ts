@@ -9,4 +9,10 @@ export class Tab2Page {
 
   constructor() {}
 
+  // Funcion que maneja el cambio de segmentos
+  segmentChanged(){}
+
+  
+
+
 }
