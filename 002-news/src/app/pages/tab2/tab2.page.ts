@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class Tab2Page {
 
   // Creo una nueva propiedad, que sera un arreglo de strings 
-  public categories: string[] =['business','entertainment','general','health','science','sports','technology']
+  public categories: string[] =['business','entertainment','general','health','science','sports','technology'];
+  // Creo propiedad selectedCategory y Pongo el valor a 'general'
+  public selectedCategory:string = this.categories[2];
 
   constructor() {}
 
