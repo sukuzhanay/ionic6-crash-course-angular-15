@@ -13,14 +13,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <!-- ionChange se diaparara cuando cambie de segmento-->
-  <ion-segment value="bussines" (ionChange)="segmentChanged($event)" mode="md" scrollable="true">
+  <!-- ionChange se diaparara cuando cambie de segmento, selectedCategory
+  lo uso para que aparezca como activado-->
+  <ion-segment [value]="selectedCategory" (ionChange)="segmentChanged($event)" mode="md" scrollable>
     
     <!--Itero sobre el array de categories y hago binding-->
     <ion-segment-button 
       *ngFor="let category of categories"
       [value]="category">
-      <ion-label>{{category}}</ion-label>
+      <ion-label class="ion-text-capitalize">{{category}}</ion-label>
     </ion-segment-button>
     
 
