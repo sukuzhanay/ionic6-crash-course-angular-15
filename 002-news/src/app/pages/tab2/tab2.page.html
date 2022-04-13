@@ -15,12 +15,15 @@
 
   <!-- ionChange se diaparara cuando cambie de segmento-->
   <ion-segment value="bussines" (ionChange)="segmentChanged($event)" mode="md" scrollable="true">
-    <ion-segment-button value="pizza">
-      <ion-label>Bussines</ion-label>
+    
+    <!--Itero sobre el array de categories y hago binding-->
+    <ion-segment-button 
+      *ngFor="let category of categories"
+      [value]="category">
+      <ion-label>{{category}}</ion-label>
     </ion-segment-button>
-    <ion-segment-button value="sport">
-      <ion-label>Sport</ion-label>
-    </ion-segment-button>
+    
+
   </ion-segment>
 
 </ion-content>
