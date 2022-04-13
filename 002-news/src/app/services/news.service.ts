@@ -14,9 +14,16 @@ export class NewsService {
   constructor(private http: HttpClient) { }
   // Retorna un obxervable y lo pipeo parar transformar la salida
   getTopNews():Observable<Article[]>{
-    return this.http.get<NewsResp>(`https://newsapi.org/v2/top-headlines?sources=techcrunch`,{
+
+    return this.http.get<NewsResp>(`https://newsapi.org/v2/top-headlines?country=us&category=business`,{
       params :{apiKey}
     }).pipe(map(( { articles } )=> articles));// Desestructuro los articulos
-  } 
+  }
+  //Funcion Headlines por categoria
+  getTopHeadlinesByCategory(category:string):Observable<Article[]>{
+    return this.http.get<NewsResp>(`https://newsapi.org/v2/top-headlines?country=us&category=${category}`,{
+      params :{apiKey}
+    }).pipe(map(( { articles } )=> articles));// Desestructuro los articulos
+  }
 }
  
