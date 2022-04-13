@@ -4,12 +4,12 @@ import { NewsService } from 'src/app/services/news.service';
 // Importo la interfaz
 import { NewsResp } from '../../interfaces/index';
 
-
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
+// Implemento la primera peticion OnInit
 export class Tab2Page implements OnInit {
 
   // Creo una nueva propiedad, que sera un arreglo de strings 
